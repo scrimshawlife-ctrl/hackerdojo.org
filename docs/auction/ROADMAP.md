@@ -15,7 +15,8 @@ Phase 0 docs → Phase 1 MVP → Phase 2 payments → Phase 3 transparency → P
 | 3 | Donor transparency | Public totals + board reporting |
 | 4 | Impact Relay | Feed outcomes into Dojo impact systems |
 
-Task breakdown: [TODO.md](./TODO.md) (Phase 1 detailed; Phases 2–4 outlined).
+Phase 1 build order (slices): **[SLICES.md](./SLICES.md)**  
+Task checklist: [TODO.md](./TODO.md)
 
 ---
 
@@ -48,9 +49,22 @@ Task breakdown: [TODO.md](./TODO.md) (Phase 1 detailed; Phases 2–4 outlined).
 
 ---
 
-## Phase 1 — MVP
+## Phase 1 — MVP (minimal fully functional auction)
 
-**Goal:** Ship a usable silent auction for fundraising lots (artwork / donated items).
+**Goal:** Ship the smallest auction that staff can actually run end-to-end.
+
+Build as six slices (details in [SLICES.md](./SLICES.md)):
+
+| Slice | Name | Demo after slice |
+|-------|------|------------------|
+| 0 | Bootstrap | Schema + admin user |
+| 1 | Browse | Gallery + detail + countdown |
+| 2 | Bid | Login + valid bid sticks |
+| 3 | Admin | Create / edit / close without DB |
+| 4 | Emails | Bid / outbid / winner / closed / ending soon |
+| 5 | Ship | Staging passes acceptance → **MVP done** |
+
+One PR per slice when practical. Do not start slice *N+1* until slice *N* **Done when** passes.
 
 ### In scope
 
@@ -77,6 +91,7 @@ Task breakdown: [TODO.md](./TODO.md) (Phase 1 detailed; Phases 2–4 outlined).
 
 ### Exit criteria
 
+- Slices 0–5 complete per [SLICES.md](./SLICES.md)
 - [ACCEPTANCE.md](./ACCEPTANCE.md) F1–F6 pass on staging
 - Nonfunctional checks N1–N5 pass
 - Secrets in env (not hardcoded); CORS not open `*` on authenticated routes

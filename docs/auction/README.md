@@ -65,6 +65,7 @@ This package defines requirements, architecture, data model, API, UI wireframes,
 | Doc | Purpose |
 |-----|---------|
 | [START_HERE.md](./START_HERE.md) | Reading order, implementation order, assumptions, scope |
+| [SLICES.md](./SLICES.md) | **Build guide:** vertical slices → minimal fully functional auction |
 | [CURRENT_STATE.md](./CURRENT_STATE.md) | Repository audit (observed / inferred / unknown) |
 | [REQUIREMENTS.md](./REQUIREMENTS.md) | Functional & nonfunctional requirements; out of scope |
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | Frontend, backend, database, email, auth, deployment |
@@ -74,20 +75,33 @@ This package defines requirements, architecture, data model, API, UI wireframes,
 | [EMAILS.md](./EMAILS.md) | Notification templates and triggers |
 | [SECURITY.md](./SECURITY.md) | AuthZ, validation, rate limits, bid integrity |
 | [ACCEPTANCE.md](./ACCEPTANCE.md) | Requirement → implementation → verification |
-| [ROADMAP.md](./ROADMAP.md) | Full roadmap: Phases 0–4 (docs → MVP → payments → transparency → Impact Relay) |
-| [TODO.md](./TODO.md) | Tasks for all roadmap phases (~2 hours each) |
+| [ROADMAP.md](./ROADMAP.md) | Full roadmap: Phases 0–4 |
+| [TODO.md](./TODO.md) | Tasks by slice / phase (~2 hours each) |
+
+## Build path (Phase 1)
+
+See **[SLICES.md](./SLICES.md)**. Short version:
+
+| Slice | Delivers |
+|-------|----------|
+| 0 Bootstrap | DB + admin user |
+| 1 Browse | Gallery, detail, countdown |
+| 2 Bid | Login + place bid |
+| 3 Admin | Create / edit / close |
+| 4 Emails | Bid / outbid / winner / closed / ending soon |
+| 5 Ship | Staging acceptance → **minimal fully functional MVP** |
 
 ## Roadmap (summary)
 
 | Phase | Name | Status |
 |-------|------|--------|
 | 0 | Documentation | In progress (this package / planning PR) |
-| 1 | MVP | Planned — see [TODO.md](./TODO.md) Phase 1 |
-| 2 | Payments | Planned — see [ROADMAP.md](./ROADMAP.md) + TODO T27–T34 |
-| 3 | Donor transparency | Planned — see ROADMAP + TODO T35–T41 |
-| 4 | Impact Relay integration | Planned — see ROADMAP + TODO T42–T48 |
+| 1 | MVP (slices 0–5) | Planned — [SLICES.md](./SLICES.md) + [TODO.md](./TODO.md) |
+| 2 | Payments | After MVP — ROADMAP + TODO T27–T34 |
+| 3 | Donor transparency | After payments — TODO T35–T41 |
+| 4 | Impact Relay integration | When API exists — TODO T42–T48 |
 
-Details, exit criteria, and dependencies: [ROADMAP.md](./ROADMAP.md).
+Details: [ROADMAP.md](./ROADMAP.md).
 
 ## Current status
 
