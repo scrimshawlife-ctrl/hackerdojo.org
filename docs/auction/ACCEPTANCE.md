@@ -68,3 +68,4 @@ Every MVP feature maps to **Requirement → Implementation → Verification**.
 | Scope | Docs only; no application runtime behavior change |
 | Honesty | CURRENT_STATE separates OBSERVED / INFERRED / UNKNOWN |
 | Root README | Points to `docs/auction` under Silent Auction MVP (Planning) |
+| Roadmap | [ROADMAP.md](./ROADMAP.md) covers Phases 0–4 with scope, deliverables, exit criteria; [TODO.md](./TODO.md) lists tasks for each phase |
