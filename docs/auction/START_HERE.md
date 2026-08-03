@@ -17,6 +17,8 @@
 
 ## Implementation order (after this PR is approved)
 
+Follow the full roadmap in [ROADMAP.md](./ROADMAP.md). Phase 1 detail:
+
 1. **Decide infrastructure gaps** — This repo has no in-repo User model, ORM, auth, or email sender. Approve the minimal additions in ARCHITECTURE.md before coding.  
 2. **Data model + migrations** — User (new), Artwork, Bid, Notification.  
 3. **Read APIs + static gallery / artwork pages** — browse and countdown without bidding.  
@@ -25,6 +27,7 @@
 6. **Email notifications** — bid received, outbid, ending soon, winner, closed.  
 7. **Admin CRUD + close** — protect with admin role.  
 8. **Acceptance tests / manual checklist** — [ACCEPTANCE.md](./ACCEPTANCE.md).  
+9. **Later phases** — Payments (2) → Donor transparency (3) → Impact Relay (4); tasks in [TODO.md](./TODO.md).  
 
 ## Assumptions
 
