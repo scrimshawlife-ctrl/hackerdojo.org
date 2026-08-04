@@ -176,7 +176,7 @@
   function showLoginForm(opts) {
     opts = opts || {};
     openModal(
-      'Log in to bid',
+      'Log In to Bid',
       '<p class="auction-modal-help">Enter your email. We will send a one-time code.</p>' +
         '<form id="auction-login-form" class="auction-form">' +
         '<label>Name <span class="optional">(optional)</span>' +
@@ -186,7 +186,7 @@
         '<p id="auction-modal-error" class="auction-modal-error" hidden></p>' +
         '<div class="auction-modal-actions">' +
         '<button type="button" class="button" data-close="1">Cancel</button>' +
-        '<button type="submit" class="button button-red">Send code</button>' +
+        '<button type="submit" class="button button-red">Send Code</button>' +
         '</div></form>'
     );
 
@@ -223,7 +223,7 @@
       : '<p class="auction-modal-help">Check your inbox for a 6-digit code.</p>';
 
     openModal(
-      'Enter login code',
+      'Enter Login Code',
       hint +
         '<form id="auction-otp-form" class="auction-form">' +
         '<label>Code' +
@@ -266,7 +266,7 @@
   function showBidForm(art) {
     var min = art.minimum_next_bid;
     openModal(
-      'Place a bid',
+      'Place a Bid',
       '<p class="auction-modal-help"><strong>' +
         escapeHtml(art.title) +
         '</strong><br/>Minimum bid: ' +
@@ -280,7 +280,7 @@
         '<p id="auction-modal-error" class="auction-modal-error" hidden></p>' +
         '<div class="auction-modal-actions">' +
         '<button type="button" class="button" data-close="1">Cancel</button>' +
-        '<button type="submit" class="button button-red">Submit bid</button>' +
+        '<button type="submit" class="button button-red">Submit Bid</button>' +
         '</div>' +
         '<p class="auction-note">You will get an email if someone outbids you.</p>' +
         '</form>'
@@ -300,7 +300,7 @@
         });
         closeModal();
         openModal(
-          'Bid placed',
+          'Bid Placed',
           '<p class="auction-modal-help">Your bid of <strong>' +
             formatMoney(res.bid.amount) +
             '</strong> is the current high bid.</p>' +
@@ -367,6 +367,7 @@
       '<div>Ends in <span class="auction-countdown" data-ends-at="' +
       escapeHtml(art.ends_at) +
       '">…</span></div>' +
+      '<div class="auction-card-cta">View lot →</div>' +
       '</div></div></a></article>'
     );
   }
@@ -467,11 +468,11 @@
         : '<p class="auction-session">Not signed in</p>';
 
       var cta = canBid
-        ? '<button type="button" class="button button-red auction-bid-cta is-ready" id="auction-place-bid">Place bid</button>'
-        : '<button type="button" class="button button-red auction-bid-cta" disabled>Bidding closed</button>';
+        ? '<button type="button" class="button button-red auction-bid-cta is-ready" id="auction-place-bid">Place Bid</button>'
+        : '<button type="button" class="button button-red auction-bid-cta" disabled>Bidding Closed</button>';
 
       el.innerHTML =
-        '<a class="auction-back" href="/auction/">← All lots</a>' +
+        '<a class="auction-back" href="/auction/">← Back to Auction</a>' +
         '<div class="auction-detail">' +
         '<div class="auction-detail-image-wrap">' +
         img +
@@ -502,7 +503,7 @@
         '</div>' +
         sessionLine +
         cta +
-        '<div class="auction-bids" style="margin-top:28px"><h2>Recent bids</h2>' +
+        '<div class="auction-bids"><h2>Recent Bids</h2>' +
         bidRows +
         '</div>' +
         '</div></div>';
@@ -529,7 +530,7 @@
       }
     } catch (err) {
       el.innerHTML =
-        '<a class="auction-back" href="/auction/">← All lots</a>' +
+        '<a class="auction-back" href="/auction/">← Back to Auction</a>' +
         '<div class="auction-error">' +
         escapeHtml(err.message || 'Artwork not found') +
         '</div>';

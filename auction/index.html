@@ -5,17 +5,25 @@ permalink: /auction/
 ---
 <link rel="stylesheet" href="/static/css/auction.css">
 
-<div class="auction-page">
-  <div class="auction-status-banner">Silent Auction</div>
-  <h1>Auction Space</h1>
-  <p class="auction-lede">
-    Browse fundraising lots and place your bid before the countdown ends.
+<div class="auction-hero">
+  <div class="auction-hero-tagline">Fundraising</div>
+  <h1 class="auction-hero-title">Silent Auction</h1>
+  <p class="auction-hero-desc">
+    Browse donated lots and place your bid before the countdown ends.
     Sign in with a one-time email code — no password required.
     Proceeds support Hacker Dojo programs and community.
   </p>
+</div>
 
-  <div id="auction-gallery" aria-live="polite">
-    <div class="auction-loading">Loading lots…</div>
+<div class="section auction-section" style="padding-top: 20px;">
+  <div class="section-header">
+    <div class="section-title">Open Lots</div>
+    <div class="section-description">Tap a lot to view details, bid history, and place a bid.</div>
+  </div>
+  <div class="section-content auction-section-content">
+    <div id="auction-gallery" aria-live="polite">
+      <div class="auction-loading">Loading lots…</div>
+    </div>
   </div>
 </div>
 

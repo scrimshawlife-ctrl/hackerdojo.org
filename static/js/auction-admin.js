@@ -126,12 +126,12 @@
 
   function renderGate(message) {
     root.innerHTML =
-      '<div class="auction-page">' +
-      '<h1>Admin · Silent Auction</h1>' +
+      '<div class="admin-page">' +
+      '<div class="section-title" style="text-align:left">Auction Admin</div>' +
       '<div class="auction-error">' +
       escapeHtml(message) +
       '</div>' +
-      '<div id="admin-login-panel" style="margin-top:20px"></div>' +
+      '<div id="admin-login-panel"></div>' +
       '</div>';
     mountLogin(document.getElementById('admin-login-panel'));
   }
@@ -143,7 +143,7 @@
       '<label>Email<input type="email" name="email" required autocomplete="email" /></label>' +
       '<label>Name (optional)<input type="text" name="name" /></label>' +
       '<p id="admin-login-error" class="auction-modal-error" hidden></p>' +
-      '<button type="submit" class="button button-red">Send login code</button>' +
+      '<button type="submit" class="button button-red">Send Login Code</button>' +
       '</form>' +
       '<form id="admin-otp-form" class="auction-form admin-login-form" hidden>' +
       '<p id="admin-dev-otp" class="auction-modal-dev" hidden></p>' +
@@ -282,20 +282,20 @@
         : '<p class="auction-bids-empty">No bids on this lot.</p>';
 
     root.innerHTML =
-      '<div class="auction-page admin-page">' +
+      '<div class="admin-page">' +
       '<div class="admin-header">' +
-      '<div><div class="auction-status-banner">Admin</div>' +
-      '<h1>Silent Auction</h1>' +
+      '<div><div class="auction-hero-tagline">Admin</div>' +
+      '<div class="section-title" style="text-align:left;margin-top:10px">Silent Auction</div>' +
       '<p class="auction-lede">Create lots, activate bidding, and close winners. Signed in as <strong>' +
       escapeHtml(state.user.email) +
       '</strong>.</p></div>' +
       '<div class="admin-header-actions">' +
-      '<a class="button" href="/auction/">Public gallery</a> ' +
-      '<button type="button" class="button" id="admin-logout">Log out</button>' +
+      '<a class="button" href="/auction/">Public Gallery</a> ' +
+      '<button type="button" class="button" id="admin-logout">Log Out</button>' +
       '</div></div>' +
       '<div id="admin-flash" class="admin-flash" hidden></div>' +
       '<div class="admin-toolbar">' +
-      '<button type="button" class="button button-red" id="admin-new">New artwork</button>' +
+      '<button type="button" class="button button-red" id="admin-new">New Artwork</button>' +
       '</div>' +
       '<div class="admin-layout">' +
       '<div class="admin-table-wrap">' +
@@ -308,7 +308,7 @@
       '</tbody></table></div>' +
       '<div class="admin-editor">' +
       '<h2>' +
-      (form.id ? 'Edit artwork' : 'New artwork') +
+      (form.id ? 'Edit Artwork' : 'New Artwork') +
       '</h2>' +
       '<form id="admin-form" class="auction-form">' +
       '<input type="hidden" name="id" value="' +
@@ -359,10 +359,10 @@
       '<div class="admin-form-actions">' +
       '<button type="submit" class="button button-red">Save</button> ' +
       (form.id && form.status !== 'closed'
-        ? '<button type="button" class="button button-darkblue" id="admin-close">Close auction</button> '
+        ? '<button type="button" class="button button-darkblue" id="admin-close">Close Auction</button> '
         : '') +
       (form.id && form.status === 'draft'
-        ? '<button type="button" class="button" id="admin-delete">Delete draft</button>'
+        ? '<button type="button" class="button" id="admin-delete">Delete Draft</button>'
         : '') +
       '</div></form>' +
       (form.id
@@ -501,7 +501,7 @@
       renderApp();
     } catch (ex) {
       root.innerHTML =
-        '<div class="auction-page"><div class="auction-error">' +
+        '<div class="admin-page"><div class="auction-error">' +
         escapeHtml(ex.message) +
         '</div></div>';
     }
