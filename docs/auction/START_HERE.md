@@ -22,6 +22,21 @@
 1. Record DB / auth / email / API host in [DECISIONS.md](./DECISIONS.md) (closes T00d).  
 2. Build **only** [SLICES.md](./SLICES.md) **0 → 5**, in order.  
 3. After Slice 5, stop — that is the **minimal fully functional** Auction Space.  
+5. [ARCHITECTURE.md](./ARCHITECTURE.md) — how it fits this repo  
+6. [DATA_MODEL.md](./DATA_MODEL.md) — tables and relationships  
+7. [API.md](./API.md) — REST surface  
+8. [UI.md](./UI.md) — page wireframes  
+9. [EMAILS.md](./EMAILS.md) — notification catalog  
+10. [SECURITY.md](./SECURITY.md) — threats and controls  
+11. [ACCEPTANCE.md](./ACCEPTANCE.md) — how we know it works  
+12. [ROADMAP.md](./ROADMAP.md) — phases 0–4  
+13. [TODO.md](./TODO.md) — task checklist by slice  
+
+## How to implement (after this PR is approved)
+
+1. Finish Phase 0 decisions (DB, auth, email, API host).  
+2. Build **only** [SLICES.md](./SLICES.md) **0 → 5**, in order.  
+3. After Slice 5, stop — that is the **minimal fully functional** auction.  
 4. Later: Phase 2 payments → Phase 3 transparency → Phase 4 Impact Relay.
 
 ```text

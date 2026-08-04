@@ -11,10 +11,10 @@ Related: [CURRENT_STATE.md](./CURRENT_STATE.md) unknowns · [ARCHITECTURE.md](./
 
 | ID | Topic | Choice | Decided by | Date | Notes |
 |----|-------|--------|------------|------|-------|
-| D1 | Database | _pending_ | | | Must support transactional row locks for bids |
-| D2 | Auth method | _pending_ | | | Default proposal: email magic-link / OTP + HTTP-only session cookie |
-| D3 | Email provider | _pending_ | | | Transactional only (bid / outbid / winner / closed / ending soon) |
-| D4 | API host | _pending_ | | | Must run `api/*.js` serverless handlers beside waitlist |
+| D1 | Database | Hosted Postgres via `DATABASE_URL` (Neon or Supabase-compatible) | Operator (defaults approved) | 2026-08-04 | Transactional row locks for bids (`SELECT … FOR UPDATE`) |
+| D2 | Auth method | Email magic-link / OTP + HTTP-only signed session cookie | Operator (defaults approved) | 2026-08-04 | Same flow for bidder + admin; admin via `role=admin` / `ADMIN_EMAIL` seed |
+| D3 | Email provider | Resend (`RESEND_API_KEY` + `EMAIL_FROM`) | Operator (defaults approved) | 2026-08-04 | Transactional only (bid / outbid / winner / closed / ending soon) |
+| D4 | API host | Vercel serverless (`api/*.js` + `vercel.json`) | Operator (defaults approved) | 2026-08-04 | Same pattern as `api/waitlist.js`; static site remains GitHub Pages |
 
 ### Candidate shortlists (not prescriptions)
 
@@ -35,15 +35,16 @@ Copy into the Slice 0 / staging secrets store. Names are suggestions — rename 
 
 | Variable | Purpose | Required from |
 |----------|---------|---------------|
-| `DATABASE_URL` | DB connection string | D1 |
-| `SESSION_SECRET` | Sign/encrypt session cookies | D2 |
+| `DATABASE_URL` | Postgres connection string | D1 |
+| `SESSION_SECRET` | Sign/encrypt session cookies (≥32 chars) | D2 |
 | `ADMIN_EMAIL` | Seed admin user | Slice 0 |
-| `EMAIL_API_KEY` | Provider API key | D3 |
-| `EMAIL_FROM` | From address for auction mail | D3 |
+| `RESEND_API_KEY` | Resend API key (`EMAIL_API_KEY` alias also accepted) | D3 |
+| `EMAIL_FROM` | From address for auction mail (verified in Resend) | D3 |
 | `AUCTION_CRON_SECRET` | Authorize ending-soon cron | Slice 4 |
-| `CORS_ORIGIN` | Allowed browser origin(s) | Slice 5 |
+| `CORS_ORIGIN` | Allowed browser origin(s), e.g. `https://hackerdojo.org` | Slice 5 |
+| `SITE_URL` | Absolute site origin for magic links (e.g. `https://hackerdojo.org`) | D2 / Slice 2 |
 
-Add provider-specific vars (e.g. `RESEND_API_KEY`) when D3 is chosen; keep secrets out of the client and out of git.
+Add provider-specific vars when D3 is chosen; keep secrets out of the client and out of git.
 
 ---
 
@@ -55,6 +56,8 @@ Add provider-specific vars (e.g. `RESEND_API_KEY`) when D3 is chosen; keep secre
 4. Copy confirmed choices + env list into Slice 0 task **T01**.  
 5. Open the Slice 0 implementation PR.
 
+**T00d status:** closed 2026-08-04 with operator-approved defaults above.
+
 ---
 
 ## History
@@ -63,3 +66,4 @@ Add provider-specific vars (e.g. `RESEND_API_KEY`) when D3 is chosen; keep secre
 |------|-------|
 | 2026-08-03 | Planning docs package opened; upstream [PR #62](https://github.com/hd-admin/hackerdojo.org/pull/62) merged to `hd-admin/hackerdojo.org` |
 | 2026-08-04 | Decision log + env checklist added so Phase 0 can finish without blocking on ad-hoc chat |
+| 2026-08-04 | D1–D4 recorded (Postgres, magic-link/OTP, Resend, Vercel); Slice 0 unblocked |

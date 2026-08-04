@@ -61,6 +61,7 @@ Every MVP feature maps to **Requirement → Implementation → Verification**.
 | N5 Secure | Mutating routes require auth; admin gated; bid race test passes; secrets not in client |
 
 ## Documentation acceptance (Phase 0)
+## Documentation acceptance (this PR)
 
 | Check | Verification |
 |-------|--------------|
@@ -69,4 +70,5 @@ Every MVP feature maps to **Requirement → Implementation → Verification**.
 | Honesty | CURRENT_STATE separates OBSERVED / INFERRED / UNKNOWN |
 | Root README | Points to `docs/auction` under Auction Space / Silent Auction planning |
 | Decisions | [DECISIONS.md](./DECISIONS.md) exists with D1–D4 log + env checklist |
+| Root README | Points to `docs/auction` under Silent Auction MVP (Planning) |
 | Roadmap | [ROADMAP.md](./ROADMAP.md) covers Phases 0–4; [SLICES.md](./SLICES.md) defines Phase 1 vertical slices to a minimal fully functional auction; [TODO.md](./TODO.md) lists tasks per slice |
