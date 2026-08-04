@@ -1,0 +1,25 @@
+---
+layout: default
+title: Silent Auction | Hacker Dojo
+permalink: /auction/
+---
+<link rel="stylesheet" href="/static/css/auction.css">
+
+<div class="auction-page">
+  <div class="auction-status-banner">Silent Auction</div>
+  <h1>Auction Space</h1>
+  <p class="auction-lede">
+    Browse fundraising lots and place your bid before the countdown ends.
+    Proceeds support Hacker Dojo programs and community.
+  </p>
+
+  <div id="auction-gallery" aria-live="polite">
+    <div class="auction-loading">Loading lots…</div>
+  </div>
+</div>
+
+<script>
+  // Optional: point at a separate Vercel API host when static site is on GitHub Pages.
+  // window.HD_AUCTION_API = 'https://your-project.vercel.app';
+</script>
+<script src="/static/js/auction.js"></script>

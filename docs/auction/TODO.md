@@ -13,7 +13,7 @@ Do not start Phase 1 coding until [DECISIONS.md](./DECISIONS.md) records DB / au
 - [x] **T00b** Planning docs package under `docs/auction/`
 - [x] **T00c** Root README pointer + planning PR ([hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62))
 - [x] **T00c2** Decision log + env checklist → [DECISIONS.md](./DECISIONS.md)
-- [ ] **T00d** Reviewer records DB / auth / email / API host decisions in DECISIONS.md
+- [x] **T00d** Reviewer records DB / auth / email / API host decisions in DECISIONS.md (defaults 2026-08-04)
 - [x] **T00e** Upstream Phase 0 docs merged; open Phase 1 PRs **one slice at a time** after T00d
 
 ---
@@ -24,20 +24,20 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 
 ### Slice 0 — Bootstrap
 
-- [ ] **T01** Copy approved choices from [DECISIONS.md](./DECISIONS.md) into Slice 0 PR; confirm env vars present in staging.
-- [ ] **T02** Add DB client + migration tooling; empty migration pipeline runs.
-- [ ] **T03** Migrate `User` + seed one admin email from env.
-- [ ] **T04** Migrate `Artwork`, `Bid`, `Notification` + indexes ([DATA_MODEL.md](./DATA_MODEL.md)).
-- [ ] **T05** Shared API helpers: JSON, error codes, money parse/validate, requireUser / requireAdmin.
+- [x] **T01** Copy approved choices from [DECISIONS.md](./DECISIONS.md) into Slice 0 PR; confirm env vars present in staging.
+- [x] **T02** Add DB client + migration tooling; empty migration pipeline runs.
+- [x] **T03** Migrate `User` + seed one admin email from env.
+- [x] **T04** Migrate `Artwork`, `Bid`, `Notification` + indexes ([DATA_MODEL.md](./DATA_MODEL.md)).
+- [x] **T05** Shared API helpers: JSON, error codes, money parse/validate, requireUser / requireAdmin.
 
-**Slice 0 done when:** migrations apply; admin user exists.
+**Slice 0 done when:** migrations apply; admin user exists. → see [SLICE_0_RUNBOOK.md](./SLICE_0_RUNBOOK.md)
 
 ### Slice 1 — Browse
 
-- [ ] **T09** `GET /api/auction/artworks` + `GET /api/auction/artworks/:id` (+ bid amounts).
-- [ ] **T09b** Seed one `active` artwork for local/staging demos.
-- [ ] **T10** Jekyll gallery page `/auction/` wired to list API.
-- [ ] **T11** Artwork detail page + countdown from `ends_at` (bid CTA disabled or “coming next”).
+- [x] **T09** `GET /api/auction/artworks` + `GET /api/auction/artworks/:id` (+ bid amounts).
+- [x] **T09b** Seed one `active` artwork for local/staging demos.
+- [x] **T10** Jekyll gallery page `/auction/` wired to list API.
+- [x] **T11** Artwork detail page + countdown from `ends_at` (bid CTA disabled or “coming next”).
 
 **Slice 1 done when:** visitor can browse lots and see a live countdown.
 

@@ -111,5 +111,7 @@ Details: [ROADMAP.md](./ROADMAP.md).
 | Repository audit | Complete (see [CURRENT_STATE.md](./CURRENT_STATE.md)) |
 | Planning docs | This package (Phases 0–4 + slices + decisions log) |
 | Upstream merge | [hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62) merged 2026-08-03 |
-| Application code | **Unchanged** |
-| Implementation | Not started — blocked on [DECISIONS.md](./DECISIONS.md) D1–D4 |
+| Application code | **Slices 0–1** — bootstrap + public browse (gallery, detail, countdown) |
+| Implementation | Phase 1 in progress; next is [SLICES.md](./SLICES.md) Slice 2 (Bid) |
+| Slice 0 runbook | [SLICE_0_RUNBOOK.md](./SLICE_0_RUNBOOK.md) |
+| Slice 1 runbook | [SLICE_1_RUNBOOK.md](./SLICE_1_RUNBOOK.md) |
