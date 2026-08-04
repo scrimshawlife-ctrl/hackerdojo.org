@@ -1,6 +1,6 @@
-# Roadmap — Silent Auction
+# Roadmap — Auction Space (Silent Auction)
 
-Full delivery roadmap for the Hacker Dojo Silent Auction fundraising feature.  
+Full delivery roadmap for Hacker Dojo **Auction Space**.  
 Stay aligned with “simple fundraising,” not marketplace scope.
 
 ```text
@@ -20,7 +20,7 @@ Task checklist: [TODO.md](./TODO.md)
 
 ---
 
-## Phase 0 — Documentation (this PR)
+## Phase 0 — Documentation
 
 **Goal:** Design and document the MVP so reviewers can approve scope and infrastructure before implementation.
 
@@ -28,6 +28,7 @@ Task checklist: [TODO.md](./TODO.md)
 
 - Repository audit ([CURRENT_STATE.md](./CURRENT_STATE.md))
 - Requirements, architecture, data model, API, UI wireframes, emails, security, acceptance, tasks
+- Decision log ([DECISIONS.md](./DECISIONS.md))
 - Root README pointer to `docs/auction`
 - **No production behavior change**
 
@@ -38,13 +39,13 @@ Task checklist: [TODO.md](./TODO.md)
 ### Deliverables
 
 - Complete `docs/auction/` package (this tree)
-- Draft planning PR for CODEOWNERS review
+- Planning PR for CODEOWNERS review ([hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62) merged)
 
 ### Exit criteria
 
 - [x] Documentation package committed
-- [ ] Planning PR reviewed
-- [ ] Infrastructure decisions recorded: database, auth method, email provider, API host
+- [x] Planning PR reviewed / merged upstream
+- [ ] Infrastructure decisions recorded in [DECISIONS.md](./DECISIONS.md): database, auth method, email provider, API host
 - [ ] Phase 1 kickoff approved
 
 ---

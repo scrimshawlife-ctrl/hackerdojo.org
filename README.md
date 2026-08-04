@@ -20,6 +20,7 @@ Once all pre-requisites are installed, you can preview the website using:
 jekyll serve
 ```
 
-## Silent Auction MVP (Planning)
+## Auction Space (Silent Auction) — Planning
 
-See [docs/auction](./docs/auction).
+Planning docs for the fundraising silent auction live in [docs/auction](./docs/auction).  
+Start at [docs/auction/START_HERE.md](./docs/auction/START_HERE.md). Infrastructure choices: [docs/auction/DECISIONS.md](./docs/auction/DECISIONS.md).

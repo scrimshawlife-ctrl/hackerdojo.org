@@ -3,7 +3,7 @@
 Build guide: **[SLICES.md](./SLICES.md)** (read this first for Phase 1).  
 Roadmap: [ROADMAP.md](./ROADMAP.md).
 
-Do not start Phase 1 coding until Phase 0 review records DB / auth / email / API host choices.
+Do not start Phase 1 coding until [DECISIONS.md](./DECISIONS.md) records DB / auth / email / API host choices.
 
 ---
 
@@ -11,9 +11,10 @@ Do not start Phase 1 coding until Phase 0 review records DB / auth / email / API
 
 - [x] **T00a** Repository audit → CURRENT_STATE.md
 - [x] **T00b** Planning docs package under `docs/auction/`
-- [x] **T00c** Root README pointer + draft planning PR
-- [ ] **T00d** Reviewer records DB / auth / email / API host decisions
-- [ ] **T00e** Merge Phase 0 docs; open Phase 1 implementation PRs **one slice at a time**
+- [x] **T00c** Root README pointer + planning PR ([hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62))
+- [x] **T00c2** Decision log + env checklist → [DECISIONS.md](./DECISIONS.md)
+- [ ] **T00d** Reviewer records DB / auth / email / API host decisions in DECISIONS.md
+- [x] **T00e** Upstream Phase 0 docs merged; open Phase 1 PRs **one slice at a time** after T00d
 
 ---
 
@@ -23,7 +24,7 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 
 ### Slice 0 — Bootstrap
 
-- [ ] **T01** Record approved choices: database, email provider, auth method, serverless host; env var checklist.
+- [ ] **T01** Copy approved choices from [DECISIONS.md](./DECISIONS.md) into Slice 0 PR; confirm env vars present in staging.
 - [ ] **T02** Add DB client + migration tooling; empty migration pipeline runs.
 - [ ] **T03** Migrate `User` + seed one admin email from env.
 - [ ] **T04** Migrate `Artwork`, `Bid`, `Notification` + indexes ([DATA_MODEL.md](./DATA_MODEL.md)).

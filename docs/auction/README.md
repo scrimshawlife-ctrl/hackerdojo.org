@@ -1,14 +1,14 @@
-# Silent Auction MVP — Planning
+# Auction Space — Silent Auction MVP Planning
 
-Documentation-first design for a minimal Hacker Dojo fundraising silent auction.
+Documentation-first design for **Auction Space**: Hacker Dojo’s minimal fundraising silent auction.
 
-**Status:** Phase 0 — documentation only. No production behavior has been changed.
+**Status:** Phase 0 docs complete on upstream (`hd-admin` [PR #62](https://github.com/hd-admin/hackerdojo.org/pull/62)). Infrastructure choices still open in [DECISIONS.md](./DECISIONS.md). No production auction behavior has shipped.
 
 ## Overview
 
-Hacker Dojo needs a simple silent auction for fundraising — typically artwork and donated items. This is **not** an online marketplace. Bidders browse listings, place bids before a deadline, and receive email updates. Admins manage artworks and close auctions.
+Auction Space is a simple silent auction for fundraising — typically artwork and donated items. This is **not** an online marketplace. Bidders browse listings, place bids before a deadline, and receive email updates. Admins manage artworks and close auctions.
 
-This package defines requirements, architecture, data model, API, UI wireframes, emails, security, acceptance criteria, and an implementation roadmap **before** code is written.
+This package defines requirements, architecture, data model, API, UI wireframes, emails, security, acceptance criteria, decisions, and an implementation roadmap **before** application code is written.
 
 ## Goals
 
@@ -66,6 +66,7 @@ This package defines requirements, architecture, data model, API, UI wireframes,
 |-----|---------|
 | [START_HERE.md](./START_HERE.md) | Reading order, implementation order, assumptions, scope |
 | [SLICES.md](./SLICES.md) | **Build guide:** vertical slices → minimal fully functional auction |
+| [DECISIONS.md](./DECISIONS.md) | **Phase 0 gate:** DB / auth / email / API host + env checklist |
 | [CURRENT_STATE.md](./CURRENT_STATE.md) | Repository audit (observed / inferred / unknown) |
 | [REQUIREMENTS.md](./REQUIREMENTS.md) | Functional & nonfunctional requirements; out of scope |
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | Frontend, backend, database, email, auth, deployment |
@@ -95,7 +96,7 @@ See **[SLICES.md](./SLICES.md)**. Short version:
 
 | Phase | Name | Status |
 |-------|------|--------|
-| 0 | Documentation | In progress (this package / planning PR) |
+| 0 | Documentation | Docs package done; **T00d** decisions still open |
 | 1 | MVP (slices 0–5) | Planned — [SLICES.md](./SLICES.md) + [TODO.md](./TODO.md) |
 | 2 | Payments | After MVP — ROADMAP + TODO T27–T34 |
 | 3 | Donor transparency | After payments — TODO T35–T41 |
@@ -108,6 +109,7 @@ Details: [ROADMAP.md](./ROADMAP.md).
 | Item | State |
 |------|-------|
 | Repository audit | Complete (see [CURRENT_STATE.md](./CURRENT_STATE.md)) |
-| Planning docs | This package (includes full Phases 0–4 roadmap) |
+| Planning docs | This package (Phases 0–4 + slices + decisions log) |
+| Upstream merge | [hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62) merged 2026-08-03 |
 | Application code | **Unchanged** |
-| Implementation | Not started — blocked on review of this PR |
+| Implementation | Not started — blocked on [DECISIONS.md](./DECISIONS.md) D1–D4 |
