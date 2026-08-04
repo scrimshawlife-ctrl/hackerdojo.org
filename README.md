@@ -19,3 +19,8 @@ Once all pre-requisites are installed, you can preview the website using:
 ```sh
 jekyll serve
 ```
+
+## Auction Space (Silent Auction) — Planning
+
+Planning docs for the fundraising silent auction live in [docs/auction](./docs/auction).  
+Start at [docs/auction/START_HERE.md](./docs/auction/START_HERE.md). Infrastructure choices: [docs/auction/DECISIONS.md](./docs/auction/DECISIONS.md).
