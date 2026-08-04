@@ -43,14 +43,14 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 
 ### Slice 2 — Bid
 
-- [ ] **T06** `POST /api/auction/auth/request-link` + token persistence + rate limit.
-- [ ] **T07** `POST /api/auction/auth/verify` + session cookie + `GET /me` + `DELETE` session.
-- [ ] **T08** Minimal login UI (reused by bid modal).
-- [ ] **T12** `POST /api/auction/bids` with transactional row lock + validation errors.
-- [ ] **T13** Bid modal UI + success/error + refresh current bid on page.
-- [ ] **T14** Manual concurrency check (two near-simultaneous bids).
+- [x] **T06** `POST /api/auction/auth/request-link` + token persistence + rate limit.
+- [x] **T07** `POST /api/auction/auth/verify` + session cookie + `GET /me` + `DELETE` session.
+- [x] **T08** Minimal login UI (reused by bid modal).
+- [x] **T12** `POST /api/auction/bids` with transactional row lock + validation errors.
+- [x] **T13** Bid modal UI + success/error + refresh current bid on page.
+- [ ] **T14** Manual concurrency check (two near-simultaneous bids) — operator smoke on staging.
 
-**Slice 2 done when:** logged-in user can place a valid bid; invalid/late bids fail cleanly.
+**Slice 2 done when:** logged-in user can place a valid bid; invalid/late bids fail cleanly. → [SLICE_2_RUNBOOK.md](./SLICE_2_RUNBOOK.md)
 
 ### Slice 3 — Admin
 
