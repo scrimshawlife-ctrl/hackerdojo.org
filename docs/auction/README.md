@@ -111,9 +111,6 @@ Details: [ROADMAP.md](./ROADMAP.md).
 | Repository audit | Complete (see [CURRENT_STATE.md](./CURRENT_STATE.md)) |
 | Planning docs | This package (Phases 0–4 + slices + decisions log) |
 | Upstream merge | [hd-admin#62](https://github.com/hd-admin/hackerdojo.org/pull/62) merged 2026-08-03 |
-| Application code | **Slices 0–3** — bootstrap, browse, bid, admin CRUD/close |
-| Implementation | Phase 1 in progress; next is [SLICES.md](./SLICES.md) Slice 4 (Emails polish) |
-| Slice 0 runbook | [SLICE_0_RUNBOOK.md](./SLICE_0_RUNBOOK.md) |
-| Slice 1 runbook | [SLICE_1_RUNBOOK.md](./SLICE_1_RUNBOOK.md) |
-| Slice 2 runbook | [SLICE_2_RUNBOOK.md](./SLICE_2_RUNBOOK.md) |
-| Slice 3 runbook | [SLICE_3_RUNBOOK.md](./SLICE_3_RUNBOOK.md) |
+| Application code | **Slices 0–4** — full email catalog + ending-soon/auto-close cron |
+| Implementation | Phase 1 in progress; next is [SLICES.md](./SLICES.md) Slice 5 (Ship) |
+| Slice 0–4 runbooks | [SLICE_0](./SLICE_0_RUNBOOK.md) · [1](./SLICE_1_RUNBOOK.md) · [2](./SLICE_2_RUNBOOK.md) · [3](./SLICE_3_RUNBOOK.md) · [4](./SLICE_4_RUNBOOK.md) |

@@ -62,12 +62,12 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 
 ### Slice 4 — Emails
 
-- [ ] **T15** Email send helper + `Notification` write on success/failure.
-- [ ] **T16** `bid_received` + `outbid` from bid handler.
-- [ ] **T17** `winner` + `auction_closed` on close.
-- [ ] **T18** Secured cron for `auction_ending_soon` + idempotency.
+- [x] **T15** Email send helper + `Notification` write on success/failure.
+- [x] **T16** `bid_received` + `outbid` from bid handler.
+- [x] **T17** `winner` + `auction_closed` on close.
+- [x] **T18** Secured cron for `auction_ending_soon` + idempotency (+ auto-close expired).
 
-**Slice 4 done when:** emails in [EMAILS.md](./EMAILS.md) send for the happy path.
+**Slice 4 done when:** emails in [EMAILS.md](./EMAILS.md) send for the happy path. → [SLICE_4_RUNBOOK.md](./SLICE_4_RUNBOOK.md)
 
 ### Slice 5 — Ship → minimal fully functional
 
