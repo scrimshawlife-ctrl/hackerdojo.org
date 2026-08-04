@@ -32,6 +32,7 @@ Fundraising silent auction for art (and donated lots), planned and implemented i
 | [docs/auction/SLICE_0_RUNBOOK.md](./docs/auction/SLICE_0_RUNBOOK.md) | Bootstrap (DB migrate + admin seed) |
 | [docs/auction/SLICE_1_RUNBOOK.md](./docs/auction/SLICE_1_RUNBOOK.md) | Browse (gallery + detail + countdown) |
 | [docs/auction/SLICE_2_RUNBOOK.md](./docs/auction/SLICE_2_RUNBOOK.md) | Bid (OTP login + place bid) |
+| [docs/auction/SLICE_3_RUNBOOK.md](./docs/auction/SLICE_3_RUNBOOK.md) | Admin (create / edit / close) |
 
 ### Auction bootstrap (Slices 0–1)
 

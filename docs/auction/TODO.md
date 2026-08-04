@@ -54,11 +54,11 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 
 ### Slice 3 — Admin
 
-- [ ] **T19** Admin list/create API (`GET`/`POST` artworks).
-- [ ] **T20** Admin patch + delete-draft + close (sets winner).
-- [ ] **T21** Admin HTML page: table, editor form, bid list.
+- [x] **T19** Admin list/create API (`GET`/`POST` artworks).
+- [x] **T20** Admin patch + delete-draft + close (sets winner).
+- [x] **T21** Admin HTML page: table, editor form, bid list.
 
-**Slice 3 done when:** staff can create → activate → close a lot without DB access.
+**Slice 3 done when:** staff can create → activate → close a lot without DB access. → [SLICE_3_RUNBOOK.md](./SLICE_3_RUNBOOK.md)
 
 ### Slice 4 — Emails
 
