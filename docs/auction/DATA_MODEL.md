@@ -33,6 +33,7 @@ Implementation uses an `auction_` prefix so the schema can share a Postgres data
 | Notification | `auction_notifications` |
 | Login token (magic-link / OTP) | `auction_login_tokens` |
 | Migration bookkeeping | `auction_schema_migrations` |
+## Tables
 
 ### User (**NEW** — required)
 

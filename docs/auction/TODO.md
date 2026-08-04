@@ -4,6 +4,7 @@ Build guide: **[SLICES.md](./SLICES.md)** (read this first for Phase 1).
 Roadmap: [ROADMAP.md](./ROADMAP.md).
 
 Do not start Phase 1 coding until [DECISIONS.md](./DECISIONS.md) records DB / auth / email / API host choices.
+Do not start Phase 1 coding until Phase 0 review records DB / auth / email / API host choices.
 
 ---
 
@@ -15,6 +16,9 @@ Do not start Phase 1 coding until [DECISIONS.md](./DECISIONS.md) records DB / au
 - [x] **T00c2** Decision log + env checklist → [DECISIONS.md](./DECISIONS.md)
 - [x] **T00d** Reviewer records DB / auth / email / API host decisions in DECISIONS.md (defaults 2026-08-04)
 - [x] **T00e** Upstream Phase 0 docs merged; open Phase 1 PRs **one slice at a time** after T00d
+- [x] **T00c** Root README pointer + draft planning PR
+- [ ] **T00d** Reviewer records DB / auth / email / API host decisions
+- [ ] **T00e** Merge Phase 0 docs; open Phase 1 implementation PRs **one slice at a time**
 
 ---
 
@@ -38,6 +42,20 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 - [x] **T09b** Seed one `active` artwork for local/staging demos.
 - [x] **T10** Jekyll gallery page `/auction/` wired to list API.
 - [x] **T11** Artwork detail page + countdown from `ends_at` (bid CTA disabled or “coming next”).
+- [ ] **T01** Record approved choices: database, email provider, auth method, serverless host; env var checklist.
+- [ ] **T02** Add DB client + migration tooling; empty migration pipeline runs.
+- [ ] **T03** Migrate `User` + seed one admin email from env.
+- [ ] **T04** Migrate `Artwork`, `Bid`, `Notification` + indexes ([DATA_MODEL.md](./DATA_MODEL.md)).
+- [ ] **T05** Shared API helpers: JSON, error codes, money parse/validate, requireUser / requireAdmin.
+
+**Slice 0 done when:** migrations apply; admin user exists.
+
+### Slice 1 — Browse
+
+- [ ] **T09** `GET /api/auction/artworks` + `GET /api/auction/artworks/:id` (+ bid amounts).
+- [ ] **T09b** Seed one `active` artwork for local/staging demos.
+- [ ] **T10** Jekyll gallery page `/auction/` wired to list API.
+- [ ] **T11** Artwork detail page + countdown from `ends_at` (bid CTA disabled or “coming next”).
 
 **Slice 1 done when:** visitor can browse lots and see a live countdown.
 
@@ -68,6 +86,31 @@ Prefer **one PR per slice**. Each slice must meet its **Done when** in [SLICES.m
 - [x] **T18** Secured cron for `auction_ending_soon` + idempotency (+ auto-close expired).
 
 **Slice 4 done when:** emails in [EMAILS.md](./EMAILS.md) send for the happy path. → [SLICE_4_RUNBOOK.md](./SLICE_4_RUNBOOK.md)
+- [ ] **T06** `POST /api/auction/auth/request-link` + token persistence + rate limit.
+- [ ] **T07** `POST /api/auction/auth/verify` + session cookie + `GET /me` + `DELETE` session.
+- [ ] **T08** Minimal login UI (reused by bid modal).
+- [ ] **T12** `POST /api/auction/bids` with transactional row lock + validation errors.
+- [ ] **T13** Bid modal UI + success/error + refresh current bid on page.
+- [ ] **T14** Manual concurrency check (two near-simultaneous bids).
+
+**Slice 2 done when:** logged-in user can place a valid bid; invalid/late bids fail cleanly.
+
+### Slice 3 — Admin
+
+- [ ] **T19** Admin list/create API (`GET`/`POST` artworks).
+- [ ] **T20** Admin patch + delete-draft + close (sets winner).
+- [ ] **T21** Admin HTML page: table, editor form, bid list.
+
+**Slice 3 done when:** staff can create → activate → close a lot without DB access.
+
+### Slice 4 — Emails
+
+- [ ] **T15** Email send helper + `Notification` write on success/failure.
+- [ ] **T16** `bid_received` + `outbid` from bid handler.
+- [ ] **T17** `winner` + `auction_closed` on close.
+- [ ] **T18** Secured cron for `auction_ending_soon` + idempotency.
+
+**Slice 4 done when:** emails in [EMAILS.md](./EMAILS.md) send for the happy path.
 
 ### Slice 5 — Ship → minimal fully functional
 

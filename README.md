@@ -48,3 +48,6 @@ npm run auction:bootstrap    # migrate + seed admin + demo lot
 - Health: `GET /api/auction/health`
 - Gallery: `/auction/`
 - Lot detail: `/auction/artwork/?id=<uuid>`
+## Silent Auction MVP (Planning)
+
+See [docs/auction](./docs/auction).

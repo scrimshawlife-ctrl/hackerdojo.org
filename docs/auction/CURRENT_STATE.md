@@ -18,6 +18,7 @@ Findings are separated into **OBSERVED**, **INFERRED**, and **UNKNOWN**. No spec
 | Serverless API | **OBSERVED:** `api/waitlist.js` — Vercel-style `export default async function handler(req, res)` proxying POST bodies to an Airtable webhook |
 | Admin UI | **OBSERVED:** No in-repo admin application |
 | Docs folder | **OBSERVED:** `docs/auction/` planning package (Auction Space / Silent Auction MVP); no other feature docs trees |
+| Docs folder | **OBSERVED:** No prior `docs/` tree (this package introduces `docs/auction/`) |
 | CI workflows | **OBSERVED:** `.github/CODEOWNERS` only; no `.github/workflows/` |
 
 ## OBSERVED
@@ -101,3 +102,4 @@ These are reasonable conclusions from observed code, not confirmed configuration
 - Confirmed serverless host for `api/`  
 
 Planning docs are in place. Coding should wait until those four are recorded in [DECISIONS.md](./DECISIONS.md).
+Documentation can proceed; coding should wait until those four are decided in review of this PR.
