@@ -14,6 +14,8 @@ permalink: /auction/admin/
 </div>
 
 <script>
-  // window.HD_AUCTION_API = 'https://your-project.vercel.app';
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    window.HD_AUCTION_API = 'http://127.0.0.1:3000';
+  }
 </script>
 <script src="/static/js/auction-admin.js"></script>
